@@ -8,14 +8,13 @@ import Filter from './components/Filter';
 function App() {
     return (
         <div className="App">
-          <div className="container">
             <Header />
 
-            <SearchInput />
-            <Filter />
-
-            
-          </div>
+            <div className="search-input--and--filter-container">
+                <SearchInput />
+                <Filter />
+            </div>
+          
         </div>
     );
 }

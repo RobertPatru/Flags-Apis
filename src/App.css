@@ -25,7 +25,7 @@
 
 body {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     background-color: var(--very-dark-blue-dark-mode-background);
     color: var(--white-dark-mode-text);
 }
@@ -65,17 +65,17 @@ button:hover {
 
 header {
     background-color: var(--dark-bue);
-    padding: 20px 10px;
+    padding: 20px 5%;
     font-size: 18px;
     font-weight: var(--font-weigth-medium);
     margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-.main-body {
+.search-input--and--filter-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 /* SEARCH INPUT */
@@ -84,6 +84,7 @@ header {
     width: 90%;
     border-radius: var(--border-radius);
     padding: 10px 20px;
+    margin: auto;
     margin-bottom: 30px;
 }
 
@@ -104,3 +105,33 @@ ion-icon[name="search-outline"] {
 }
 
 /* FILTER */
+.filter {
+    position: relative;  
+    margin-left: 5%;
+
+    width: 200px;
+}
+
+/* label[for="region"] {
+    display: block;
+    background-color: var(--dark-bue);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 100%;
+} */
+
+select[name="region"] {
+    /* position: absolute;
+    top: 60px;
+    left: 0; */
+    z-index: 10;
+
+    width: 200px;
+    color: var(--white-dark-mode-text);
+    background-color: var(--dark-bue);
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    font-size: 16px;
+}
