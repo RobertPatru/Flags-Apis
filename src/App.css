@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+:root {
+    /* dark mode elements */
+    --dark-bue: hsl(209, 23%, 22%);
+    --very-dark-blue-dark-mode-background: hsl(207, 26%, 17%);
+    --white-dark-mode-text: hsl(0, 0%, 100%);
+
+    /* light mode  */
+    --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+    --dark-gray-light-mode-inputs: hsl(0, 0%, 52%);
+    --very-light-gray-light-mode-background: hsl(0, 0%, 98%);
+    --white-light-mode-elements: sl(0, 0%, 100%);
+
+    --font-weigth-light: 300;
+    --font-weigth-medium: 600;
+    --font-weigth-bold: 900;
+
+    --border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    background-color: var(--very-dark-blue-dark-mode-background);
+    color: var(--white-dark-mode-text);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* UTILITY CLASSES */
+
+.aling-items-flex {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.row-space-between {
+    justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row-everything-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.row-Y-center {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--white-dark-mode-text);
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header {
+    background-color: var(--dark-bue);
+    padding: 20px 10px;
+    font-size: 18px;
+    font-weight: var(--font-weigth-medium);
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SEARCH INPUT */
+.input-container {
+    background-color: var(--dark-bue);
+    width: 90%;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+input[type='search'] {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--white-dark-mode-text);
+
+    font-size: 16px;
+    padding: 10px;
+    padding-right: 0;
+    width: 100%;
+}
+
+ion-icon[name="search-outline"] {
+    font-size: 22px;
+}
+
+/* FILTER */
