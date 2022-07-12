@@ -10,13 +10,15 @@ function App() {
     return (
         <div className="App">
             <Header />
+            <div className="max-width">
+                <div className="search-input--and--filter-container">
+                    <SearchInput />
+                    <Filter />
+                </div>
 
-            <div className="search-input--and--filter-container">
-                <SearchInput />
-                <Filter />
+            <FlagsContainer />
             </div>
           
-            <FlagsContainer />
         </div>
     );
 }
