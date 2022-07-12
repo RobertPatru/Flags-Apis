@@ -13,19 +13,24 @@ function FlagsContainer() {
         const {data} = await axios.get("https://restcountries.com/v3.1/all");
         
         // HELP HERE, PLEASE
-        setAllCountries(data)
-        console.log(allCountries);  
+        setAllCountries(data);    
     }
 
-    return (
-        <div className='flags-container'>
-            {
-                allCountries.map( (country) => {
-                    <FlagCard />
-                } )
-            }
-        </div>
-    )
+    if (allCountries !== []) {
+        return (
+            <div className='flags-container'>
+                {
+                    allCountries.map( (country, index) => (
+                        <FlagCard key={index} name={country.name.common} capital={country.capital} image={country.flags.svg} population={country.population} />
+                     ) )
+                }
+            </div>
+        )
+    }
+    else {
+        console.log('All Countries is empty!!!!');
+    }
+
 }
 
 export default FlagsContainer
