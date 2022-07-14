@@ -9,7 +9,6 @@ function Header() {
         const root = document.querySelector(':root');
 
         if (darkTheme) {
-            console.log('Dark mode OFF');
             seThemeText('Light Mode');
             setModeIcon(<ion-icon name="sunny-outline"></ion-icon>);
             
@@ -20,7 +19,6 @@ function Header() {
             setDarkTheme(false);
         } 
         else if(!darkTheme) {
-            console.log('Light mode OFF');
             seThemeText('Dark Mode');
             setModeIcon(<ion-icon name="moon-outline"></ion-icon>);
             
@@ -30,8 +28,6 @@ function Header() {
             
             setDarkTheme(true);
         }
-
-        console.log(darkTheme);
     }
 
 
