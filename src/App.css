@@ -1,14 +1,14 @@
 :root {
     /* dark mode elements */
-    --dark-bue: hsl(209, 23%, 22%);
-    --very-dark-blue-dark-mode-background: hsl(207, 26%, 17%);
-    --white-dark-mode-text: hsl(0, 0%, 100%);
+    --background-color: hsl(207, 26%, 17%);
+    --secondary-background-color: hsl(209, 23%, 22%);
+    --text-color: hsl(0, 0%, 100%);
 
     /* light mode  */
     --very-light-gray-light-mode-background: hsl(0, 0%, 98%);
     --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
     --dark-gray-light-mode-inputs: hsl(0, 0%, 52%);
-    --white-light-mode-elements: sl(0, 0%, 100%);
+    --white-light-mode-elements: hsl(0, 0%, 100%);
 
     --font-weigth-light: 300;
     --font-weigth-medium: 600;
@@ -26,8 +26,8 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
-    background-color: var(--very-dark-blue-dark-mode-background);
-    color: var(--white-dark-mode-text);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* CONTROL THE MAX-WIDTH OF THE WEB PAGE */
@@ -67,7 +67,7 @@ button {
     outline: none;
     border: none;
     background: none;
-    color: var(--white-dark-mode-text);
+    color: var(--text-color);
     font-size: 16px;
 }
 
@@ -77,12 +77,12 @@ button:hover {
 
 /* HEADER */
 header {
-    background-color: var(--dark-bue);
+    background-color: var(--secondary-background-color);
     padding: 20px 5%;
     font-size: 20px;
     font-weight: var(--font-weigth-medium);
     margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 100%;
 }
 
@@ -93,19 +93,21 @@ header {
 
 /* SEARCH INPUT */
 .input-container {
-    background-color: var(--dark-bue);
+    background-color: var(--secondary-background-color);
     width: 90%;
     border-radius: var(--border-radius);
     padding: 10px 20px;
     margin: auto;
     margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 input[type='search'] {
     outline: none;
     border: none;
     background-color: transparent;
-    color: var(--white-dark-mode-text);
+    color: var(--text-color);
 
     font-size: 16px;
     padding: 10px;
@@ -127,7 +129,7 @@ ion-icon[name="search-outline"] {
 
 /* label[for="region"] {
     display: block;
-    background-color: var(--dark-bue);
+    background-color: var(--secondary-background-color);
     border-radius: var(--border-radius);
     padding: 20px;
     width: 100%;
@@ -140,13 +142,14 @@ select[name="region"] {
     z-index: 10;
 
     width: 200px;
-    color: var(--white-dark-mode-text);
-    background-color: var(--dark-bue);
+    color: var(--text-color);
+    background-color: var(--secondary-background-color);
     outline: none;
     border: none;
     border-radius: var(--border-radius);
     padding: 20px;
     font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 select[name="region"] option {
@@ -172,9 +175,9 @@ select[name="region"] option {
     margin: 0 auto;
     margin-top: 50px;
 
-    background-color: var(--dark-bue);
+    background-color: var(--secondary-background-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
