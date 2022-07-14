@@ -30,10 +30,10 @@ function AppContainer() {
             <Header />
             <AllCountriesContext.Provider value={allCountries}>
                 <div className="max-width">
-                    {/* <div className="search-input--and--filter-container"> */}
+                    <div className="search-input--and--filter-container">
                         <SearchInput />
                         <Filter />
-                    {/* </div> */}
+                    </div>
                     <FlagsContainer />
                 </div>
             </AllCountriesContext.Provider>
