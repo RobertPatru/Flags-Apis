@@ -1,26 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react'
+
 import FlagCard from './FlagCard';
 
+import { AllCountriesContext } from '../context/AllCountriesContext';
+
 function FlagsContainer() {
-    const [allCountries, setAllCountries] = useState([]);
+    const cointriesFromContext = useContext(AllCountriesContext);
 
-    useEffect( () => {
-        fetchData();
-    }, []);
-    
-    async function fetchData() {
-        const {data} = await axios.get("https://restcountries.com/v3.1/all");
-        
-        // HELP HERE, PLEASE
-        setAllCountries(data);    
-    }
-
-    if (allCountries !== []) {
+    if (cointriesFromContext !== []) {
         return (
             <div className='flags-container'>
                 {
-                    allCountries.map( (country, index) => (
+                    cointriesFromContext.map( (country, index) => (
                         <FlagCard key={index} name={country.name.common} capital={country.capital} image={country.flags.svg} population={country.population} />
                      ) )
                 }
@@ -33,4 +24,4 @@ function FlagsContainer() {
 
 }
 
-export default FlagsContainer
+export { FlagsContainer };
