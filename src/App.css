@@ -82,7 +82,7 @@ header {
     font-size: 20px;
     font-weight: var(--font-weigth-medium);
     margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 100%;
 }
 
@@ -99,7 +99,7 @@ header {
     padding: 10px 20px;
     margin: auto;
     margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -149,7 +149,7 @@ select[name="region"] {
     border-radius: var(--border-radius);
     padding: 20px;
     font-size: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 select[name="region"] option {
@@ -177,7 +177,7 @@ select[name="region"] option {
 
     background-color: var(--secondary-background-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
@@ -189,7 +189,7 @@ select[name="region"] option {
 }
 
 .country-flag-img {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .country-name {
