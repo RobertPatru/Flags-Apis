@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import Header from './Header'
+import Header from "./Header";
 import { SearchInput } from "./SearchInput";
 import Filter from "./Filter";
 import { FlagsContainer } from "./FlagsContainer";
 
 // CONTEXTS:
 import { AllCountriesContext } from "../context/AllCountriesContext";
-
-
-
 
 function AppContainer() {
     const [allCountries, setAllCountries] = useState([]);
@@ -30,11 +27,7 @@ function AppContainer() {
             <Header />
             <AllCountriesContext.Provider value={allCountries}>
                 <div className="max-width">
-                    {/* <div className="search-input--and--filter-container"> */}
-                        <SearchInput />
-                        <Filter />
-                    {/* </div> */}
-                    <FlagsContainer />
+                    <SearchInput />
                 </div>
             </AllCountriesContext.Provider>
         </div>
