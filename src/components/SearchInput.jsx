@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FlagsContainer } from "./FlagsContainer";
-import Filter from "./Filter";
 
 function SearchInput({ func }) {
     let [word, setWord] = useState('');
@@ -19,7 +18,6 @@ function SearchInput({ func }) {
                     onChange={getWord}
                 />
             </div>
-            <Filter/>
             <FlagsContainer whatToRender={word} />
         </>
     );

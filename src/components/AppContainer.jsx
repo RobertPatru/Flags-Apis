@@ -3,8 +3,6 @@ import axios from "axios";
 
 import Header from "./Header";
 import { SearchInput } from "./SearchInput";
-import Filter from "./Filter";
-import { FlagsContainer } from "./FlagsContainer";
 
 // CONTEXTS:
 import { AllCountriesContext } from "../context/AllCountriesContext";

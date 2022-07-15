@@ -8,6 +8,8 @@ function FlagsContainer({ whatToRender }) {
     const countriesFromContext = useContext(AllCountriesContext);
     let wordToSearchFor = new RegExp(whatToRender.toLowerCase());
 
+    
+
     if (countriesFromContext !== []) {
         if (wordToSearchFor == "/(?:)/") {
             return (
