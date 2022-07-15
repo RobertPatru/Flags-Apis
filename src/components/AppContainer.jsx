@@ -26,9 +26,7 @@ function AppContainer() {
         <div className="App">
             <Header />
             <AllCountriesContext.Provider value={allCountries}>
-                <div className="max-width">
-                    <SearchInput />
-                </div>
+                <SearchInput />
             </AllCountriesContext.Provider>
         </div>
     );

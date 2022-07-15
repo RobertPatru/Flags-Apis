@@ -23,20 +23,28 @@ function FlagsContainer({ whatToRender }) {
                     ))}
                 </div>
             );
-        } 
-        else {
-            return countriesFromContext.forEach((country, index) => {
+        } else {
+            let newArrayOfCountries = [];
+
+            countriesFromContext.forEach((country) => {
                 if (wordToSearchFor.test(country.name.common.toLowerCase())) {
-                    console.log(country.name.common);
-                    <FlagCard
-                        key={index}
-                        name={country.name.common}
-                        capital={country.capital}
-                        image={country.flags.svg}
-                        population={country.population}
-                    />;
+                    newArrayOfCountries.push(country);
                 }
             });
+
+            return (
+                <div className="flags-container">
+                    {newArrayOfCountries.map((country, index) => (
+                        <FlagCard
+                            key={index}
+                            name={country.name.common}
+                            capital={country.capital}
+                            image={country.flags.svg}
+                            population={country.population}
+                        />
+                    ))}
+                </div>
+            );
         }
     } else {
         console.log("All Countries is empty!!!!");
