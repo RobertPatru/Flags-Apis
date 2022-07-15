@@ -8,10 +8,8 @@ function FlagsContainer({ whatToRender }) {
     const countriesFromContext = useContext(AllCountriesContext);
     let wordToSearchFor = new RegExp(whatToRender.toLowerCase());
 
-    console.log(wordToSearchFor);
-
     if (countriesFromContext !== []) {
-        if (wordToSearchFor === "") {
+        if (wordToSearchFor == "/(?:)/") {
             return (
                 <div className="flags-container">
                     {countriesFromContext.map((country, index) => (
@@ -25,23 +23,20 @@ function FlagsContainer({ whatToRender }) {
                     ))}
                 </div>
             );
-        } else {
-            let a = ["guam", "romania", "nimic"];
-            // WOK IN HERE
-            // WOK IN HERE
-            // WOK IN HERE
-            // WOK IN HERE
-            // WOK IN HERE
-            // WOK IN HERE
-            // WOK IN HERE
-            // let ceva = countriesFromContext.filter( country => {
-                //     wordToSearchFor.test(country.name.common.toLowerCase());
-                //     console.log(country.name.common.toLowerCase());
-                // } )
-            let ceva = a.filter((word) => {
-                wordToSearchFor.test(word.toLowerCase());
+        } 
+        else {
+            return countriesFromContext.forEach((country, index) => {
+                if (wordToSearchFor.test(country.name.common.toLowerCase())) {
+                    console.log(country.name.common);
+                    <FlagCard
+                        key={index}
+                        name={country.name.common}
+                        capital={country.capital}
+                        image={country.flags.svg}
+                        population={country.population}
+                    />;
+                }
             });
-            console.log(ceva);
         }
     } else {
         console.log("All Countries is empty!!!!");
